@@ -53,7 +53,7 @@ export const VALIDATION_MESSAGES = {
 export function validateField<T>(
   value: T,
   rules: ValidationRule<T>,
-  fieldName: string = 'field'
+  _fieldName: string = 'field'
 ): FieldValidationResult {
   // Handle null/undefined values
   if (value === null || value === undefined || value === '') {

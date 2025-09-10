@@ -26,7 +26,7 @@ export default function RequestDetailsPage() {
       try {
         setLoading(true)
         setError(null)
-        const res = await getRequestWithServices(id)
+        const res = await getRequestWithServices(id!)
         if (!res.ok) throw new Error(res.error)
         setRequest(res.data)
       } catch (e: any) {

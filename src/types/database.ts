@@ -19,6 +19,7 @@ export interface LaundryRequest {
   pickup_date: string
   pickup_time_slot: string
   special_instructions: string | null
+  internal_notes: string | null
   status: 'pending' | 'confirmed' | 'in_progress' | 'completed'
   total_estimated_cost: string | null
   created_at: string
@@ -43,7 +44,7 @@ export interface Tables {
   }
   laundry_requests: {
     Row: LaundryRequest
-    Insert: Partial<Pick<LaundryRequest, 'id' | 'status' | 'total_estimated_cost' | 'created_at'>> &
+    Insert: Partial<Pick<LaundryRequest, 'id' | 'status' | 'total_estimated_cost' | 'created_at' | 'internal_notes'>> &
       Pick<
         LaundryRequest,
         'customer_name' | 'customer_email' | 'customer_phone' | 'pickup_address' | 'pickup_date' | 'pickup_time_slot'

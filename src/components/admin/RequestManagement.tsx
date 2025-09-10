@@ -104,7 +104,7 @@ export default function RequestManagement({ onRequestSelect }: RequestManagement
   const toast = useToast()
   const [loading, setLoading] = useState(true)
   const [requests, setRequests] = useState<RequestWithServices[]>([])
-  const [serviceMap, setServiceMap] = useState<Record<string, ServiceRow>>({})
+  const [, setServiceMap] = useState<Record<string, ServiceRow>>({})
   
   // Filter states
   const [statusFilter, setStatusFilter] = useState<RequestRow['status'] | 'all'>('all')
