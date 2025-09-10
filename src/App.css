@@ -1,0 +1,61 @@
+/* Global UI overrides to visibly change the design */
+:root {
+  --brand-bg: linear-gradient(180deg, #f0f6ff 0%, #ffffff 100%);
+  --brand-primary: #1d4ed8;
+  --brand-primary-600: #2563eb;
+  --brand-text: #0f172a;
+}
+
+html, body {
+  background: var(--brand-bg);
+  color: var(--brand-text);
+}
+
+/* Make headings bolder and darker */
+h1, h2, h3 {
+  color: #0b1220;
+  letter-spacing: -0.02em;
+}
+
+/* Card look */
+.card, .panel, .box, .container-card {
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: #ffffff;
+  box-shadow: 0 10px 20px -10px rgba(2, 6, 23, 0.15);
+}
+
+/* Buttons */
+button, .btn {
+  transition: transform 120ms ease, box-shadow 120ms ease, background-color 120ms ease;
+}
+button:focus-visible, .btn:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
+}
+button:hover:not(:disabled), .btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px -6px rgba(37, 99, 235, 0.35);
+}
+
+/* Inputs */
+input, select, textarea {
+  transition: box-shadow 120ms ease, border-color 120ms ease;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--brand-primary-600) !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
+}
+
+/* Table header style tweak */
+table thead {
+  background: #f8fafc !important;
+}
+
+/* Subtle link underline animation */
+a {
+  text-underline-offset: 3px;
+}
+a:hover {
+  text-decoration: underline;
+}
